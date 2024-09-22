@@ -1,0 +1,544 @@
+version 3
+run Medium-0-20230915-12:11:14-21768
+attr configname Medium
+attr datetime 20230915-12:11:14
+attr datetimef 20230915-121114
+attr experiment Medium
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network ClientServer
+attr processid 21768
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config description "20 client computers"
+config ClientServer.numClients 20
+config network ClientServer
+config snapshot-file ClientServer.sna
+config output-vector-file ClientServer.vec
+config sim-time-limit 50000s
+config cpu-time-limit 600s
+config total-stack 7MiB
+config ClientServer.client[*].connIaTime exponential(10s)
+config ClientServer.client[*].queryIaTime exponential(2s)
+config ClientServer.client[*].numQuery "int(truncnormal(3, 1))"
+config ClientServer.server.processingTime 0.2s
+config **.server.*.display-string i=block/cogwheel;g=grp;p=50,50,ring
+
+par ClientServer.client[0].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[0].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[0].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[0].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[0].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[0].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[1].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[1].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[1].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[1].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[1].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[1].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[2].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[2].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[2].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[2].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[2].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[2].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[3].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[3].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[3].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[3].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[3].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[3].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[4].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[4].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[4].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[4].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[4].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[4].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[5].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[5].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[5].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[5].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[5].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[5].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[6].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[6].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[6].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[6].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[6].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[6].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[7].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[7].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[7].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[7].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[7].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[7].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[8].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[8].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[8].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[8].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[8].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[8].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[9].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[9].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[9].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[9].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[9].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[9].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[10].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[10].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[10].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[10].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[10].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[10].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[11].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[11].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[11].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[11].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[11].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[11].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[12].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[12].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[12].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[12].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[12].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[12].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[13].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[13].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[13].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[13].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[13].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[13].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[14].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[14].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[14].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[14].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[14].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[14].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[15].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[15].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[15].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[15].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[15].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[15].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[16].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[16].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[16].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[16].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[16].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[16].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[17].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[17].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[17].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[17].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[17].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[17].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[18].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[18].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[18].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[18].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[18].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[18].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.client[19].port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.client[19].port$o.channel disabled false
+attr mutable ""
+par ClientServer.client[19].port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[19].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[19].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[19].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.server.port$o.channel typename "\"ned.DelayChannel\""
+par ClientServer.server.port$o.channel disabled false
+attr mutable ""
+par ClientServer.server.port$o.channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.switch.port$o[20].channel typename "\"ned.DelayChannel\""
+par ClientServer.switch.port$o[20].channel disabled false
+attr mutable ""
+par ClientServer.switch.port$o[20].channel delay 0.01s
+attr mutable ""
+attr unit s
+par ClientServer.server.conn-2 typename "\"ServerProcess\""
+par ClientServer.server.conn-3 typename "\"ServerProcess\""
+par ClientServer.server.conn-4 typename "\"ServerProcess\""
+par ClientServer.server.conn-5 typename "\"ServerProcess\""
+par ClientServer.server.conn-6 typename "\"ServerProcess\""
+par ClientServer.server.conn-7 typename "\"ServerProcess\""
+par ClientServer.server.conn-8 typename "\"ServerProcess\""
+par ClientServer.server.conn-9 typename "\"ServerProcess\""
+par ClientServer.server.conn-10 typename "\"ServerProcess\""
+par ClientServer.server typename "\"Server\""
+par ClientServer.server processingTime 0.2s
+attr prompt "Time to process a query"
+attr unit s
+par ClientServer.switch typename "\"Switch\""
+par ClientServer.switch pkRate 30
+par ClientServer.switch queueMaxLen 20
+par ClientServer.client[0] typename "\"Client\""
+par ClientServer.client[0] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[0] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[0] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[0] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[1] typename "\"Client\""
+par ClientServer.client[1] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[1] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[1] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[1] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[2] typename "\"Client\""
+par ClientServer.client[2] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[2] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[2] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[2] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[3] typename "\"Client\""
+par ClientServer.client[3] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[3] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[3] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[3] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[4] typename "\"Client\""
+par ClientServer.client[4] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[4] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[4] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[4] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[5] typename "\"Client\""
+par ClientServer.client[5] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[5] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[5] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[5] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[6] typename "\"Client\""
+par ClientServer.client[6] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[6] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[6] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[6] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[7] typename "\"Client\""
+par ClientServer.client[7] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[7] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[7] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[7] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[8] typename "\"Client\""
+par ClientServer.client[8] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[8] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[8] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[8] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[9] typename "\"Client\""
+par ClientServer.client[9] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[9] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[9] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[9] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[10] typename "\"Client\""
+par ClientServer.client[10] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[10] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[10] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[10] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[11] typename "\"Client\""
+par ClientServer.client[11] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[11] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[11] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[11] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[12] typename "\"Client\""
+par ClientServer.client[12] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[12] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[12] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[12] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[13] typename "\"Client\""
+par ClientServer.client[13] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[13] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[13] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[13] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[14] typename "\"Client\""
+par ClientServer.client[14] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[14] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[14] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[14] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[15] typename "\"Client\""
+par ClientServer.client[15] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[15] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[15] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[15] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[16] typename "\"Client\""
+par ClientServer.client[16] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[16] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[16] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[16] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[17] typename "\"Client\""
+par ClientServer.client[17] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[17] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[17] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[17] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[18] typename "\"Client\""
+par ClientServer.client[18] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[18] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[18] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[18] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer.client[19] typename "\"Client\""
+par ClientServer.client[19] timeout 5s
+attr prompt "Connection timeout"
+attr unit s
+par ClientServer.client[19] connIaTime exponential(10s)
+attr prompt "Connection interarrival time"
+attr unit s
+par ClientServer.client[19] queryIaTime exponential(2s)
+attr prompt "Query interarrival time"
+attr unit s
+par ClientServer.client[19] numQuery "int(truncnormal(3, 1))"
+attr prompt "Number of queries per connection"
+par ClientServer typename "\"ClientServer\""
+par ClientServer numClients 20
+attr prompt "Number of clients"
+

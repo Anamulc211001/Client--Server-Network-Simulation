@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<analysis version="2">
+    <inputs>
+        <input pattern="/Client-ServerNetworkSimulation_DotNet/Client-ServerNetworkSimulation/results/Medium-*.vec"/>
+        <input pattern="/Client-ServerNetworkSimulation_DotNet/Client-ServerNetworkSimulation/results/Medium-*.sca"/>
+    </inputs>
+    <charts/>
+</analysis>
